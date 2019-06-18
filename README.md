@@ -20,7 +20,7 @@ $ docker-compose up
 NOTE: To run without docker container follow [steps](apple-coding-challenge/README.md) in apple-coding-challenge project.
 
 ```
-$ cd client-user-management
+$ cd client-path-sum
 $ docker build -t client-path-sum.
 $ docker run -d -p 4200:80 client-path-sum
 
