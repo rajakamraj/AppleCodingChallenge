@@ -1,0 +1,35 @@
+<h2 mat-dialog-title>Input format:</h2>
+<mat-dialog-content class="mat-typography">
+  <h3>Problem Description</h3>
+  <p>
+    Given an binary tree, return the sum of all the values in the nodes having the longest path from root.
+    If there are multiple paths that have the same longest length, please return the largest sum among those sums
+  </p>
+  <h3>Serialized binary tree data</h3>
+
+    <pre>
+    Please give the input in the following format,
+
+       1
+    /      \
+    2        3            -->    1,2,3,null,5,6,7,1,null,null,null,null,null,null,null
+    \      /   \
+    5    6     7
+    /
+    1
+
+      there are 3 paths in this tree: (1,2,5,1), (1,3,6), (1,3,7)
+ add them up, you will get 3 sums: 9(1+2+5+1), 10(1+3+6), 11(1+3+7)
+ then the function should return 9, which is the longest path with length of 4
+    </pre>
+
+
+
+  <h3>Level order serialization</h3>
+  <p>The serialized data is taken by level order traversal.  The traversal will
+    add null if there are no children on the left or right nodes</p>
+
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>OK</button>
+</mat-dialog-actions>

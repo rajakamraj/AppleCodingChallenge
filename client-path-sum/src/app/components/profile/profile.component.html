@@ -1,0 +1,27 @@
+<div class="container">
+  <header class="jumbotron">
+    <h1 class="display-3"><strong>Welcome {{currentUser.name}}</strong>,</h1>
+  </header>
+
+  <form name="form-signin"  #f="ngForm" novalidate>
+    <div class="form-group" >
+      <label for="data">Enter binary tree data in serialized form:
+        <button type="confirm" mat-button (click)="openDialog()">Input format</button></label>
+<!--      <textarea class="form-control" id="data" rows="3" name="answer"  [(ngmodel)]="currentTree.answer" #answer="ngModel"  required ></textarea>-->
+      <textarea class="form-control" id="data" rows="3" name="data"
+
+                (change)="onCommentChange($event)">
+ </textarea>
+<!--      <input type="textarea" class="form-control input-text-custom" id="data" name="data" [(ngModel)]="user.username" #username="ngModel" required />-->
+<!--      <div *ngIf="f.submitted && !username.valid" class="help-block">The tree data is invalid.</div>-->
+    </div>
+<!--    <textarea placeholder="Enter serialized binary tree data"></textarea>-->
+    <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !answer.valid }">
+      <label for="answer">Answer</label>
+      <input type="text" class="form-control input-text-custom" id="answer" name="answer" [(ngModel)]="currentTree.answer" #answer="ngModel" disabled />
+    </div>
+
+    <button class="btn btn-lg btn-primary btn-block btn-signin form-submit-button" (click)="calculate()" type="submit">Calculate</button>
+  </form>
+  <a class="btn btn-link log-out" (click)="logOut()">LogOut</a>
+</div>
