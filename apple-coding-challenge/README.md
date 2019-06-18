@@ -1,4 +1,4 @@
-# User-Management
+# Apple Coding Challenge
 
 This project is a Spring Boot, MySQL, Hibernate and Liquabase project.
 
