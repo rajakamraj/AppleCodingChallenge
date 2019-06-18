@@ -21,9 +21,8 @@ NOTE: To run without docker container follow [steps](apple-coding-challenge/READ
 
 ```
 $ cd client-user-management
-$ docker build -t client-user-management .
-$ docker run -d -p 4200:80 client-user-management
-```
+$ docker build -t client-path-sum.
+$ docker run -d -p 4200:80 client-path-sum
 
 ### Access application using following URL
 
